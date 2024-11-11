@@ -13,6 +13,24 @@
 
 Редактируем созданный `Vagrantfile` в папке `c:\vm` (отредактированный файл лежит на GitHub)
 
+1. Добавляем репозиторий  `ENV['VAGRANT_SERVER_URL'] = 'https://vagrant.elab.pro'`
+2. Указываем имя бокса `config.vm.box = "ubuntu/focal64"`
+3. Указываем настройку сети `config.vm.network "public_network"`
+4. Указываем настройки для VirtualBox:
+   config.vm.provider "virtualbox" do |vb|
+     vb.gui = false
+     vb.memory = "4096"
+     vb.cpus = "4"
+     vb.name = "otus_vm"
+  end
+5. Указываем Provision:
+   config.vm.provision "shell", inline: <<-SHELL
+      apt update
+      apt -y full-upgrade
+      reboot           
+  SHELL
+end
+
 Выполняем команду `vagrant up` из командной строки (cmd) в папке `c:\vm`
 
 После выполнения `Vagrantfile` заходим в виртуальную машину командой `vagrant ssh`
