@@ -28,7 +28,7 @@
 
      `vb.name = "otus_vm"`
 
-   `end`
+     `end`
 
 6. Указываем Provision (соблюдая отступы):
 
