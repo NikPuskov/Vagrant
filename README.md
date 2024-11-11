@@ -16,7 +16,7 @@
 1. Добавляем репозиторий  `ENV['VAGRANT_SERVER_URL'] = 'https://vagrant.elab.pro'`
 2. Указываем имя бокса `config.vm.box = "ubuntu/focal64"`
 3. Указываем настройку сети `config.vm.network "public_network"`
-4. Указываем настройки для VirtualBox:
+4. Указываем настройки для VirtualBox (соблюдая отступы):
 
    config.vm.provider "virtualbox" do |vb|
 
@@ -30,7 +30,7 @@
 
    end
 
-6. Указываем Provision:
+6. Указываем Provision (соблюдая отступы):
 
    config.vm.provision "shell", inline: <<-SHELL
 
