@@ -1,4 +1,6 @@
 # Vagrant
+`Обновить ядро в базовой системе`
+
 Устанавливаем Vagrant для Windows https://hashicorp-releases.yandexcloud.net/vagrant/2.4.2/vagrant_2.4.2_windows_amd64.msi
 
 Устанавливаем VirtualBox для Windows https://download.virtualbox.org/virtualbox/7.1.4/VirtualBox-7.1.4-165100-Win.exe
