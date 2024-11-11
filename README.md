@@ -17,18 +17,31 @@
 2. Указываем имя бокса `config.vm.box = "ubuntu/focal64"`
 3. Указываем настройку сети `config.vm.network "public_network"`
 4. Указываем настройки для VirtualBox:
+
    config.vm.provider "virtualbox" do |vb|
+
      vb.gui = false
+
      vb.memory = "4096"
+
      vb.cpus = "4"
+
      vb.name = "otus_vm"
-  end
-5. Указываем Provision:
+
+   end
+
+6. Указываем Provision:
+
    config.vm.provision "shell", inline: <<-SHELL
+
       apt update
+
       apt -y full-upgrade
+
       reboot           
-  SHELL
+
+   SHELL
+
 end
 
 Выполняем команду `vagrant up` из командной строки (cmd) в папке `c:\vm`
