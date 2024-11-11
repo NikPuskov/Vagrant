@@ -18,31 +18,31 @@
 3. Указываем настройку сети `config.vm.network "public_network"`
 4. Указываем настройки для VirtualBox (соблюдая отступы):
 
-   config.vm.provider "virtualbox" do |vb|
+   `config.vm.provider "virtualbox" do |vb|`
 
-     vb.gui = false
+     `vb.gui = false`
 
-     vb.memory = "4096"
+     `vb.memory = "4096"`
 
-     vb.cpus = "4"
+     `vb.cpus = "4"`
 
-     vb.name = "otus_vm"
+     `vb.name = "otus_vm"`
 
-   end
+   `end`
 
 6. Указываем Provision (соблюдая отступы):
 
-   config.vm.provision "shell", inline: <<-SHELL
+   `config.vm.provision "shell", inline: <<-SHELL`
 
-      apt update
+      `apt update`
 
-      apt -y full-upgrade
+      `apt -y full-upgrade`
 
-      reboot           
+      `reboot`        
 
-   SHELL
+   `SHELL`
 
-end
+`end`
 
 Выполняем команду `vagrant up` из командной строки (cmd) в папке `c:\vm`
 
